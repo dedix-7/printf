@@ -1,14 +1,23 @@
-#include "main.h"
-
+#include<stdio.h>
 /**
  *_printf - printf function
  *@format: number of arguments
  *@...: arguments passed
  *Return: chars printed
  */
-
-int _printf(const char *format, ...)
+int _printf(char *format, ...)
 {
+    va_list args;
+    int printed_chars;
+
+    va_start(args, format);
+    printed_chars = vprintf(format, args);
+    va_end(args);
+
+    return printed_chars;
+}
+
+	/**
 	int count = 0;
 	unsigned int i = 0, val = 0;
 	va_list list;
@@ -45,3 +54,4 @@ int _printf(const char *format, ...)
 	va_end(list);
 	return (count);
 }
+*/
