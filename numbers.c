@@ -2,15 +2,14 @@
 
 /**
  *
- * printint - prints integers
+ * printinteger - prints integers
  * @r: va_list integer to be printed
  * Return: number of digits printed
  */
-int printint(va_list prnum)
+int printinteger(long long int r)
 {
-	int remainder, quotient, r, number = 0;
+	long long int remainder, quotient, number = 0;
 
-	r = va_arg(prnum,long long int);
 	if (r < 0)
 	{
 		_putchar('-');
@@ -34,9 +33,22 @@ int printint(va_list prnum)
 	}
 	if (remainder < quotient)
 	{
-		number = number + (printint(quotient));
+		number = number + (printinteger(quotient));
 		_putchar(remainder + 48);
 		number++;
 	}
 	return (number);
+}
+/**
+ * printint - convert a va_list btype to int
+ * @number: va_list
+ * Return: number of digits
+ */
+int printint(va_list number)
+{
+	long long int digitcount, integer;
+
+	integer = va_arg(number, long long int);
+	digitcount = printinteger(integer);
+	return (digitcount);
 }

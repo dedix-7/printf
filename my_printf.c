@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include "main.h"
+#include<stdarg.h>
 /**
  *_printf - printf function
  *@format: number of arguments
