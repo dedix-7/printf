@@ -24,8 +24,10 @@ int printint(int r)
 		return (1);
 	}
 	if (remainder < quotient)
-		number += printint(quotient);
-	_putchar(remainder + 48);
+	{
+		number = number + (printint(quotient));
+		_putchar(remainder + 48);
+	}
 	return (number);
 }
 /**
@@ -35,12 +37,12 @@ int printint(int r)
  */
 int main(void)
 {
-	int c = 10023456;
+	int c = 100000;
 	int number;
 
 	//	printint(c);
-	//	number = printint(c);
-	//	printf("The number of digits is : %d\n", number);
+	number = printint(c);
+	printf("\nThe number of digits is : %d\n", number);
 	printf("%d", c);
 	return (0);
 }
