@@ -31,6 +31,11 @@ int _printf(const char *format, ...)
 			i++;
 			count = (val - 1);
 		}
+		else if (format[i + 1] == '%')
+		{
+			_putchar('%');
+			i++;
+		}
 		count += 1;
 	}
 	va_end(list);
