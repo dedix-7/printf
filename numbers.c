@@ -6,42 +6,37 @@
  * @r: va_list integer to be printed
  * Return: number of digits printed
  */
-int printint(int r)
+int printint(va_list prnum)
 {
-	int remainder, quotient, number = 0;
+	int remainder, quotient, r, number = 0;
 
+	r = va_arg(prnum,long long int);
+	if (r < 0)
+	{
+		_putchar('-');
+		number++;
+		r = -r;
+	}
 	remainder = r % 10;
 	quotient = r / 10;
 	if (r == 0)	{
 		_putchar(48);
+		number++;
 		_putchar(48);
-		return (2);
+		number++;
+		return (number);
 	}
 	if (quotient == 0)
 	{
 		_putchar(remainder + 48);
-		return (1);
+		number++;
+		return (number);
 	}
 	if (remainder < quotient)
 	{
 		number = number + (printint(quotient));
 		_putchar(remainder + 48);
+		number++;
 	}
 	return (number);
-}
-/**
- * main - check if integrs are printed and digits counted
- * Return: 0 on success
- * no arguments
- */
-int main(void)
-{
-	int c = 100000;
-	int number;
-
-	//	printint(c);
-	number = printint(c);
-	printf("\nThe number of digits is : %d\n", number);
-	printf("%d", c);
-	return (0);
 }
