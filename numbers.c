@@ -11,6 +11,12 @@ int printint(va_list prnum)
 	int remainder, quotient, r, number = 0;
 
 	r = va_arg(prnum, int);
+	if (r < 0)
+	{
+		_putchar('-');
+		number++;
+		r = -r;
+	}
 	remainder = r % 10;
 	quotient = r / 10;
 	if (r == 0)
