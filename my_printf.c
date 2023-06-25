@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include "main.h"
 /**
  *_printf - printf function
  *@format: number of arguments
@@ -16,9 +17,10 @@ int _printf(char *format, ...)
 
     return printed_chars;
 }
-
-	/**
-	int count = 0;
+/**
+int _printf(char *format, ...)
+{
+	
 	unsigned int i = 0, val = 0;
 	va_list list;
 
