@@ -10,7 +10,7 @@ int printint(va_list prnum)
 {
 	int remainder, quotient, r, number = 0;
 
-	r = va_arg(prnum, int);
+	r = va_arg(prnum,long long int);
 	if (r < 0)
 	{
 		_putchar('-');
