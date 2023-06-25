@@ -8,9 +8,8 @@
 
 int _putchar(char c);
 int printint(va_list r);
-int _puts(va_list str);
+int _puts(char *str);
 int _printf(const char *format, ...);
-int printint(va_list r);
 
 
 #endif /* _PRINTF_H_ */

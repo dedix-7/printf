@@ -6,7 +6,7 @@
  *Return: length of a string
  */
 
-int _puts(va_list str)
+int _puts(char *str)
 {
 	int len = 0, count = 0;
 
