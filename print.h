@@ -4,8 +4,10 @@
 #include<unistd.h>
 #include<stdlib.h>
 #include<stdarg.h>
-#include <stdio.h>
+
 int _putchar(char c);
+int _printf(const char *format, ...);
+int _puts(char *str);
 //int printint(va_list r);
 
 #endif /* _PRINTF_H_ */
