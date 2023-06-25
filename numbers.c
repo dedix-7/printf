@@ -6,7 +6,7 @@
  * @r: va_list integer to be printed
  * Return: number of digits printed
  */
-int printint(int r)
+int printint(va_list r)
 {
 	int remainder, quotient, number = 0;
 
