@@ -34,19 +34,15 @@ int _printf(char *format, ...)
 			_putchar(va_arg(list, int));
 			i++;
 		}
-		else if (format[i + 1]) == 's')
-	  	{
+		else if (format[i + 1] == 's')
+		{
 			val = _puts(va_arg(list, char *));
 			i++;
+			count = (val - 1);
 		}
-		else if (format[i + 1] == 'i')
+		else if (format[i + 1] == '%')
 		{
-			val = printint(va_arg(list, int));
-			i++;
-		}
-		else if(format[i + 1] == 'd')
-		{
-			val = printint(va_arg(list, int));
+			_putchar('%');
 			i++;
 		}
 		count += 1;

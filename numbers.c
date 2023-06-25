@@ -19,8 +19,7 @@ int printint(va_list prnum)
 	}
 	remainder = r % 10;
 	quotient = r / 10;
-	if (r == 0)
-	{
+	if (r == 0)	{
 		_putchar(48);
 		number++;
 		_putchar(48);
