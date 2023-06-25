@@ -8,18 +8,6 @@
  */
 int _printf(char *format, ...)
 {
-    va_list args;
-    int printed_chars;
-
-    va_start(args, format);
-    printed_chars = vprintf(format, args);
-    va_end(args);
-
-    return printed_chars;
-}
-/**
-int _printf(char *format, ...)
-{
 	
 	unsigned int i = 0, val = 0;
 	va_list list;
@@ -38,7 +26,7 @@ int _printf(char *format, ...)
 		}
 		else if (format[i + 1] == 's')
 		{
-			val = _puts(va_arg(list, char *));
+		  val = _puts(list);
 			i++;
 			count = (val - 1);
 		}
