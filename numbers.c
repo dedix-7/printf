@@ -12,8 +12,7 @@ int printint(int r)
 
 	remainder = r % 10;
 	quotient = r / 10;
-	if (r == 0)
-	{
+	if (r == 0)	{
 		_putchar(48);
 		_putchar(48);
 		return (2);

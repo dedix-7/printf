@@ -25,6 +25,12 @@ int _printf(const char *format, ...)
 			_putchar(va_arg(list, int));
 			i++;
 		}
+		else if (format[i + 1] == 's')
+		{
+			val = _puts(va_arg(list, char *));
+			i++;
+			count = (val - 1);
+		}
 		count += 1;
 	}
 	return (count);
