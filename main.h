@@ -5,7 +5,7 @@
 #include<stdlib.h>
 #include<stdarg.h>
 
-
+int printinteger(long long int r);
 int _putchar(char c);
 int printint(va_list r);
 int _puts(char *r);
