@@ -16,18 +16,22 @@ int printint(va_list prnum)
 	if (r == 0)
 	{
 		_putchar(48);
+		number++;
 		_putchar(48);
-		return (2);
+		number++;
+		return (number);
 	}
 	if (quotient == 0)
 	{
 		_putchar(remainder + 48);
-		return (1);
+		number++;
+		return (number);
 	}
 	if (remainder < quotient)
 	{
 		number = number + (printint(quotient));
 		_putchar(remainder + 48);
+		number++;
 	}
 	return (number);
 }
