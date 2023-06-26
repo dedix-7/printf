@@ -9,12 +9,11 @@
 
 int _printf(const char *format, ...)
 {
-	
 	unsigned int i = 0, count = 0, val = 0;
 	va_list list;
 
 	va_start(list, format);
-	for (; format[i] != '\0' ; i++)
+	while (format[i] != '\0')
 	{
 		if (format[i] != '%')
 		{
@@ -27,7 +26,7 @@ int _printf(const char *format, ...)
 		}
 		else if (format[i + 1] == 's')
 		{
-		  val = _puts(list);
+			val = _puts(va_arg(list, char *));
 			i++;
 			count = (val - 1);
 		}
@@ -38,10 +37,12 @@ int _printf(const char *format, ...)
 		}
 		else if (format[i + 1] == 'd' || format[i + 1] == 'i')
 		{
-			printinterger(va_arg(list, int));
+			val = printint(va_arg(list, int));
+			count += val;
 			i++;
 		}
 		count += 1;
+		i++;
 	}
 	return (count);
 }
