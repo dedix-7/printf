@@ -1,21 +1,13 @@
-#ifndef _PRINTF_H_
-#define _PRINTF_H_
+#ifndef MAIN_H
+#define MAIN_H
 
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdarg.h>
 
-void get_int(int number);
 int _putchar(char c);
 int _puts(char *str);
 int _printf(const char *format, ...);
+void get_int(int number);
 
-/**
- * struct choice - struct to hold a function pointer and spe
- * @i: format specifier
- * @choice: function pointer to choicve
- * Description: A struct to hold a pointer
- * to a function taht will execute on the user's choice
- * 
- */
-#endif /* _PRINTF_H_ */
+#endif /* MAIN_H*/
