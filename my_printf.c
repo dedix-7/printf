@@ -40,4 +40,3 @@ int _printf(char *format, ...)
 	va_end(list);
 	return (count);
 }
-*/
