@@ -1,11 +1,12 @@
-#include<stdio.h>
-#include<stdarg.h>
+#include "header.h"
+
 /**
  *_printf - printf function
  *@format: number of arguments
  *@...: arguments passed
  *Return: chars printed
  */
+
 int _printf(char *format, ...)
 {
 	
@@ -35,9 +36,14 @@ int _printf(char *format, ...)
 			_putchar('%');
 			i++;
 		}
+		else if (format[i + 1] == 'd' || format[i + 1] == 'i')
+		{
+			printinterger(va_arg(list, int));
+			i++;
+		}
 		count += 1;
 	}
 	va_end(list);
 	return (count);
 }
-*/
+
