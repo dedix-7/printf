@@ -25,19 +25,20 @@ int _printf(const char *format, ...)
 		switch (*++p)
 		{
 			case 'c':
-				count += _putchar(va_arg(list, int));
+				digits = _putchar(va_arg(list, int));
+				count += digits;
 				break;
 			case 'd':
-				count += printint(va_arg(list, int));
+				digits = printint(va_arg(list, int));
+				count += digits;
 				break;
 			case 'i':
-				count += printint(va_arg(list, int));
+				digits = printint(va_arg(list, int));
+				count += digits;
 				break;
 			case 's':
-				count += _puts(va_arg(list, char *));
-				break;
-			case '%':
-				count += _putchar('%');
+				digits = _puts(va_arg(list, char *));
+				count += digits;
 				break;
 			default:
 				_putchar(*p);
