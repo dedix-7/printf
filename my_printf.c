@@ -9,41 +9,42 @@
 
 int _printf(const char *format, ...)
 {
-	unsigned int i = 0, count = 0, val = 0;
+	unsigned int count = 0, digits;
+	const char *p;
 	va_list list;
 
 	va_start(list, format);
-	while (format[i] != '\0')
+	for (p = format; *p; p++)
 	{
-		if (format[i] != '%')
+		if (*p != '%')
 		{
-			_putchar(format[i]);
+			_putchar(*p);
 			count++;
+			continue;
 		}
-		else if (format[i + 1] == 'c')
+		switch (*++p)
 		{
-			_putchar(va_arg(list, int));
-			count++;
+			case 'c':
+				count += _putchar(va_arg(list, int));
+				break;
+			case 'd':
+				count += printint(va_arg(list, int));
+				break;
+			case 'i':
+				count += printint(va_arg(list, int));
+				break;
+			case 's':
+				count += _puts(va_arg(list, char *));
+				break;
+			case '%':
+				count += _putchar('%');
+				break;
+			default:
+				_putchar(*p);
+				count++;
+			break;
 		}
-		else if (format[i + 1] == 's')
-		{
-			val = _puts(va_arg(list, char *));
-			i++;
-			count += (val - 1);
-		}
-		else if (format[i + 1] == '%')
-		{
-			_putchar('%');
-			i++;
-		}
-		else if (format[i + 1] == 'd' || format[i + 1] == 'i')
-		{
-			val = printint(va_arg(list, int));
-			count += val;
-			i++;
-		}
-		count += 1;
-		i++;
 	}
+	va_end(list);
 	return (count);
 }
