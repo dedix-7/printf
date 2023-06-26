@@ -7,7 +7,7 @@
 
 
 int _putchar(char c);
-int printint(long long int r);
+int printint(int r);
 int _puts(char *str);
 int _printf(const char *format, ...);
 void get_int(int number);

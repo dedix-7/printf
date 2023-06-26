@@ -6,9 +6,9 @@
  * @r: va_list integer to be printed
  * Return: number of digits printed
  */
-int printint(long long int r)
+int printint(int r)
 {
-	long long int remainder, quotient, number = 0;
+	int remainder, quotient, number = 0;
 
 	if (r < 0)
 	{

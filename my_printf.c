@@ -9,7 +9,8 @@
 
 int _printf(const char *format, ...)
 {
-	unsigned int count = 0, digits;
+	int count = 0, intvalue, digits;
+	char *str, c;
 	const char *p;
 	va_list list;
 
@@ -29,8 +30,8 @@ int _printf(const char *format, ...)
 				count += digits;
 				break;
 			case 'd':
-				digits = printint(va_arg(list, int));
-				count += digits;
+				intvalue = va_arg(list, int);
+				count += printint(intvalue);
 				break;
 			case 'i':
 				digits = printint(va_arg(list, int));
