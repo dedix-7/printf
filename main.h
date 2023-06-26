@@ -5,12 +5,10 @@
 #include<stdlib.h>
 #include<stdarg.h>
 
-int printinteger(long long int r);
 int _putchar(char c);
-int printint(va_list r);
-int _puts(va_list r);
+int printint(long long int r);
+int _puts(char *str);
 int _printf(const char *format, ...);
-int printstr(char *str);
 /**
  * struct choice - struct to hold a function pointer and spe
  * @i: format specifier

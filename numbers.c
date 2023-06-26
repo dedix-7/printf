@@ -2,11 +2,11 @@
 
 /**
  *
- * printinteger - prints integers
+ * printint - prints integers
  * @r: va_list integer to be printed
  * Return: number of digits printed
  */
-int printinteger(long long int r)
+int printint(long long int r)
 {
 	long long int remainder, quotient, number = 0;
 
@@ -38,17 +38,4 @@ int printinteger(long long int r)
 		number++;
 	}
 	return (number);
-}
-/**
- * printint - convert a va_list btype to int
- * @number: va_list
- * Return: number of digits
- */
-int printint(va_list number)
-{
-	long long int digitcount, integer;
-
-	integer = va_arg(number, long long int);
-	digitcount = printinteger(integer);
-	return (digitcount);
 }
