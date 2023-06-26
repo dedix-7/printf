@@ -33,7 +33,7 @@ int printint(long long int r)
 	}
 	if (remainder < quotient)
 	{
-		number = number + (printinteger(quotient));
+		number = number + (printint(quotient));
 		_putchar(remainder + 48);
 		number++;
 	}

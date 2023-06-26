@@ -18,17 +18,18 @@ int _printf(const char *format, ...)
 		if (format[i] != '%')
 		{
 			_putchar(format[i]);
+			count++;
 		}
 		else if (format[i + 1] == 'c')
 		{
 			_putchar(va_arg(list, int));
-			i++;
+			count++;
 		}
 		else if (format[i + 1] == 's')
 		{
 			val = _puts(va_arg(list, char *));
 			i++;
-			count = (val - 1);
+			count += (val - 1);
 		}
 		else if (format[i + 1] == '%')
 		{
