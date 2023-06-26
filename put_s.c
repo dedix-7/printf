@@ -10,7 +10,13 @@ int _puts(char *str)
 {
 	int len = 0, count = 0;
 
-	if (str)
+	if (str == NULL)
+	{
+		str = "(null)";
+		count = _puts(str);
+		return (count);
+	}
+	else if (str)
 	{
 		while (str[len] != '\0')
 		{
