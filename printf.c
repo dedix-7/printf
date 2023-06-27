@@ -25,7 +25,7 @@ int _printf(const char *format, ...)
 			index++;
 			count += choice(args, format[index]);
 			index++;
-			continuoe;
+			continue;
 		}
 	}
 	va_end(args);
