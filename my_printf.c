@@ -26,7 +26,7 @@ int _printf(const char *format, ...)
 		}
 		else if (format[index + 1] == 's')
 		{
-			value += _puts(va_arg(args, char *));
+			value = _puts(va_arg(args, char *));
 			index++;
 			count += (value - 1);
 		}
