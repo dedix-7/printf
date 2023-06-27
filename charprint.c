@@ -9,3 +9,15 @@ int _putchar(char c)
 {
 	return (write(1, &c, 1));
 }
+/**
+ * printspace - prints a space
+ * @num: number of spaces
+ * Return: len
+ */
+int _putspace(int space)
+{
+	if (num <= 0)
+		return (printint(space));
+	_putchar(' ');
+	return (printint(space) + 1);
+}
