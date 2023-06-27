@@ -6,7 +6,7 @@
  */
 int _printf(const char *format, ...)
 {
-	int index = 0, count = 0, value = 0;
+	int index = 0, count = 0, value = 0, temp = 0;
 	va_list args;
 
 	va_start(args, format);
@@ -37,7 +37,15 @@ int _printf(const char *format, ...)
 		}
 		else if ((format[index + 1] == 'd') || (format[index + 1] == 'i'))
 		{
-			count += printint(va_arg(args, int));
+			temp = va_arg(args, int);
+			if (tem < 0)
+			{
+				_putchar('-');
+				temp = -temp;
+				count++;
+			}
+			value = printint(temp);
+			count += value;
 			index++;
 		}
 		else
