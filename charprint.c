@@ -20,6 +20,7 @@ int _putchar(char c)
 int choice(va_list r, char str)
 {
 	int count = 0;
+	char c;
 
 	switch (str)
 	{
