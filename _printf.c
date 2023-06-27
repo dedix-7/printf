@@ -21,12 +21,14 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			index++;
+			index += 1;
 			count += choice(args, format[index]);
-			index++;
-			continue;
 		}
+<<<<<<< HEAD:printf.c
 		index++;
+=======
+		index += 1;
+>>>>>>> 1ff2166e320ff778f4e6bc87adeb7ff1fe6af2f5:_printf.c
 	}
 	va_end(args);
 	return (count);

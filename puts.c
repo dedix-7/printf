@@ -16,7 +16,7 @@ int _puts(char *str)
 		count += _puts(str);
 		return (count);
 	}
-	else if (str)
+	else
 	{
 		while (str[len] != '\0')
 		{

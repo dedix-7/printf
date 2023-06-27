@@ -27,9 +27,12 @@ int choice(va_list r, char str)
 		case 'd':
 			count += printint(va_arg(r, int));
 			break;
+<<<<<<< HEAD
 		case 'i':
 			count += printint(va_arg(r, int));
 			break;
+=======
+>>>>>>> 1ff2166e320ff778f4e6bc87adeb7ff1fe6af2f5
 		default:
 			count += _putchar('%');
 			count += _putchar(str);
