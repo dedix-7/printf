@@ -1,7 +1,6 @@
 #include "main.h"
 
 /**
- *
  * printint - prints integers
  * @r: va_list integer to be printed
  * Return: number of digits printed

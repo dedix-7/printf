@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * _printf - print fornmatted output to screen
- * @format - string
+ * @format: string
  * Return: character count
  */
 int _printf(const char *format, ...)
