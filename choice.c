@@ -31,7 +31,7 @@ int choice(va_list r, char str)
 			count += printint(va_arg(r, int));
 			break;
 		default:
-			_putchar('%');
+			count += _putchar('%');
 			_putchar(str);
 			count += 2;
 	}
