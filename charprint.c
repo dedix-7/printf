@@ -22,7 +22,7 @@ int choice(va_list r, char str)
 		switch (str)
 		{
 			case 'c':
-				count +=_putchar(va_arg(r, int));
+				count += _putchar(va_arg(r, int));
 				break;
 			case 'd':
 				count += printint(va_arg(r, int));

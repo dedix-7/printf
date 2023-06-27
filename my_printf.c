@@ -2,8 +2,7 @@
 /**
  * _printf - print fornmatted output to screen
  * @format - string
- * 
- * Reteurn: charcter count
+ * Return: character count
  */
 int _printf(const char *format, ...)
 {
@@ -26,7 +25,7 @@ int _printf(const char *format, ...)
 		{
 			index++;
 			count += choice(args, format[index]);
-			index ++;
+			index++;
 			continue;
 		}
 		index++;
