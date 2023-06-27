@@ -26,7 +26,7 @@ int choice(va_list r, char str)
 				c = va_arg(r, int);
 				if (c == '\0')
 				{
-					count += _putchar('-');
+					count += _puts(NULL);
 					break;
 				}
 				count += _putchar(c);
