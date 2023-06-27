@@ -10,7 +10,7 @@ int _putchar(char c);
 int printint(int r);
 int _puts(char *str);
 int _printf(const char *format, ...);
-int choice(va_list args, char r);
+int choice(va_list r, char str);
 
 #endif /* MAIN_H*/
 
