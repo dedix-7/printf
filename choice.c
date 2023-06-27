@@ -25,8 +25,6 @@ int choice(va_list r, char str)
 			count += _putchar('%');
 			break;
 		case 'd':
-			count += printint(va_arg(r, int));
-			break;
 		case 'i':
 			count += printint(va_arg(r, int));
 			break;
