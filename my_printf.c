@@ -22,6 +22,8 @@ int _printf(const char *format, ...)
 		else
 		{
 			index++;
+			if (format[index] == NULL)
+			  return (-1);
 			count += choice(args, format[index]);
 		}
 		index++;
