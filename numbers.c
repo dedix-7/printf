@@ -3,27 +3,21 @@
 /**
  * printint - prints integers
  * @r: va_list integer to be printed
- * Return: number of digits printed
  */
-int printint(int r)
+void printint(int r)
 {
-	int val, len = 0;
+	int val;
 
 	if (!r)
-	{
-		len += _putchar('0');
-		return (len);
-	}
+		_putchar(r);
 	if (r < 0)
 	{
-		len += _putchar('-');
+		_putchar('-');
 		r = -r;
 	}
 	val = r % 10;
 	r = r / 10;
 	if (r)
-		len += printint(r);
-	len += _putchar(val + '0');
-
-	return (len);
+		printint(r);
+	_putchar(val + '0');
 }
