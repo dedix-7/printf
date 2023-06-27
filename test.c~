@@ -7,10 +7,10 @@
 int main(void)
 {
 	int len, len2;
-	char *c = "Let's check with a simple string";
+	/*	char *c = "Let's check with a simple string";*/
 
-	len =  _printf("your printf % prints %s character\n", c);
-	len2 = printf("orig printf % prints %s character\n", c);
+	len =  _printf("your printf %%% prints character\n");
+        len2 = printf("orig printf %%% prints character\n");
 
 	printf("Your printf returns %d\n thee originala printf return %d\n", len, len2);
 	return(0);
