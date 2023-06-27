@@ -22,6 +22,11 @@ int choice(va_list r, char str)
 		switch (str)
 		{
 			case 'c':
+				if ( c == NULL)
+				{
+					count += _putchar('-');
+					break;
+				}
 				count += _putchar(va_arg(r, int));
 				break;
 			case 'd':
