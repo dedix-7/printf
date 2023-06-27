@@ -21,27 +21,30 @@ int _printf(const char *format, ...)
 		}
 		else if (format[index + 1] == 'c')
 		{
-			_putchar(va_arg(args, int));
+			count += _putchar(va_arg(args, int));
 			index++;
 		}
 		else if (format[index + 1] == 's')
 		{
-			value = _puts(va_arg(args, char *));
-			count += (value - 1);
+			value += _puts(va_arg(args, char *));
 			index++;
+			count += value;
 		}
 		else if (format[index + 1] == '%')
 		{
-			_putchar('%');
+			count += _putchar('%');
 			index++;
 		}
 		else if ((format[index + 1] == 'd') || (format[index + 1] == 'i'))
 		{
-			count += printint(va_arg(args, int));
 			index++;
+			count += choice(args, format[index]);
 		}
 		else
+		{
 			_putchar('%');
+			count++;
+		}
 		index++;
 	}
 	va_end(args);
