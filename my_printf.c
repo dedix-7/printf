@@ -22,7 +22,7 @@ int _printf(const char *format, ...)
 		else
 		{
 			index++;
-			if (format[index] == NULL)
+			if (format[index] == '\0')
 			  return (-1);
 			count += choice(args, format[index]);
 		}
