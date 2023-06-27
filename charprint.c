@@ -39,14 +39,8 @@ int choice(va_list r, char str)
 				_putchar('%');
 				break;
 			default:
-				_putchar('%');
 				_putchar(str);
-<<<<<<< HEAD
 				count += 2;
-=======
-				count++;
-				count++;
->>>>>>> 0e2875f0500482847386fbeb0da65161eb783cfb
 				break;
 		}
 		return (count);
