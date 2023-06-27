@@ -1,5 +1,5 @@
 #include "main.h"
-/**
+11;rgb:0000/0000/0000/**
  * _putchar - print a character tp stdout
  * @c: character to print
  * Return: 1 on success
@@ -39,8 +39,9 @@ int choice(va_list r, char str)
 				count += _putchar('%');
 				break;
 			default:
+				_putchar('%');
 				_putchar(str);
-				count ++;
+				count += 2;
 				break;
 		}
 		return (count);
