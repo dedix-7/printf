@@ -18,7 +18,6 @@ int _putchar(char c)
 int choice(va_list r, char str)
 {
 	int count = 0;
-	char *try = &str;
 	char c;
 
 		switch (str)
@@ -41,7 +40,7 @@ int choice(va_list r, char str)
 				break;
 			default:
 				_putchar('%');
-				_putchar(*++try);
+				_putchar(str);
 				count += 2;
 				break;
 		}
