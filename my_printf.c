@@ -27,8 +27,8 @@ int _printf(const char *format, ...)
 		else if (format[index + 1] == 's')
 		{
 			value = _puts(va_arg(args, char *));
+			count += (value - 1);
 			index++;
-			count += value - 1;
 		}
 		else if (format[index + 1] == '%')
 		{
@@ -37,8 +37,12 @@ int _printf(const char *format, ...)
 		}
 		else if ((format[index + 1] == 'd') || (format[index + 1] == 'i'))
 		{
-			printint(va_arg(args, int));
+			count += printint(va_arg(args, int));
 			index++;
+		}
+		else
+		{
+			_putchar('%');
 		}
 		count += 1;
 	}
