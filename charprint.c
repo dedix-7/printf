@@ -36,7 +36,7 @@ int choice(va_list r, char str)
 				count += _puts(va_arg(r, char *));
 				break;
 			case '%':
-				_putchar('%');
+				count += _putchar('%');
 				break;
 			default:
 				_putchar('%');
