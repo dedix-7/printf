@@ -11,7 +11,9 @@ int printint(int r)
 	int val, len = 0;
 
 	if (!r)
+	{
 		len += _putchar(r);
+		return (len);
 	if (r < 0)
 	{
 		len += _putchar('-');
