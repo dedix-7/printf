@@ -18,7 +18,6 @@ int _printf(const char *format, ...)
 		{
 			_putchar(format[index]);
 			count++;
-			continue;
 		}
 		else
 		{
@@ -27,6 +26,7 @@ int _printf(const char *format, ...)
 			index++;
 			continue;
 		}
+		index++;
 	}
 	va_end(args);
 	return (count);
