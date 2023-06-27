@@ -14,7 +14,7 @@ int _putchar(char c)
  * @space: number of spaces
  * Return: len
  */
-int _putspace(int space)
+int printspace(int space)
 {
 	if (space <= 0)
 		return (printint(space));
