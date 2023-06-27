@@ -36,11 +36,11 @@ int choice(va_list r, char str)
 				count += _puts(va_arg(r, char *));
 				break;
 			case '%':
-				count += _putchar('%');
+				_putchar('%');
 				break;
 			default:
 				_putchar(str);
-				count++;
+				count += 2;
 				break;
 		}
 		return (count);

@@ -5,7 +5,6 @@
 #include <stdlib.h>
 #include <stdarg.h>
 
-
 int _putchar(char c);
 int printint(int r);
 int _puts(char *str);
