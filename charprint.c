@@ -11,12 +11,12 @@ int _putchar(char c)
 }
 /**
  * printspace - prints a space
- * @num: number of spaces
+ * @space: number of spaces
  * Return: len
  */
 int _putspace(int space)
 {
-	if (num <= 0)
+	if (space <= 0)
 		return (printint(space));
 	_putchar(' ');
 	return (printint(space) + 1);
