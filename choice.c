@@ -27,6 +27,7 @@ int choice(va_list r, char str)
 			count += printint(va_arg(r, int));
 			break;
 		default:
+			_putchar(str);
 			break;
 	}
 	return (count);
