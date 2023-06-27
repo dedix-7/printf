@@ -6,7 +6,7 @@
 #include <stdarg.h>
 
 int _putchar(char c);
-void printint(int r);
+int printint(int r);
 int _puts(char *str);
 int _printf(const char *format, ...);
 int choice(va_list r, char str);

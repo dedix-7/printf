@@ -3,21 +3,25 @@
 /**
  * printint - prints integers
  * @r: va_list integer to be printed
+ * Return: return the number of printed
  */
-void printint(int r)
+
+int printint(int r)
 {
-	int val;
+	int val, len = 0;
 
 	if (!r)
-		_putchar(r);
+		len += _putchar(r);
 	if (r < 0)
 	{
-		_putchar('-');
+		len += _putchar('-');
 		r = -r;
 	}
 	val = r % 10;
 	r = r / 10;
 	if (r)
-		printint(r);
-	_putchar(val + '0');
+		len += printint(r);
+	len += _putchar(val + '0');
+
+	return (len);
 }
