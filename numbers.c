@@ -8,7 +8,7 @@
 
 int printint(int r)
 {
-	int val, len = 0;
+	int remainder, quotient, len = 0;
 
 	if (!r)
 	{
@@ -17,15 +17,14 @@ int printint(int r)
 	}
 	if (r < 0)
 	{
-		if (len == 0)
 		len += _putchar('-');
 		r = -r;
 	}
-	val = r % 10;
-	r = r / 10;
-	if (r)
-		len += printint(r);
-	len += _putchar(val + '0');
+	remainder = r % 10;
+	quotient = r / 10;
+	if (quotient)
+		len += printint(quotient);
+	len += _putchar(remainder + '0');
 
 	return (len);
 }

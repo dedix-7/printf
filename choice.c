@@ -26,9 +26,6 @@ int choice(va_list r, char str)
 		case 'i':
 			count += printint(va_arg(r, int));
 			break;
-		case ' ':
-			count += printspace(va_arg(r, int));
-			break;
 		default:
 			break;
 	}

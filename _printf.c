@@ -18,15 +18,13 @@ int _printf(const char *format, ...)
 		{
 			_putchar(format[index]);
 			count++;
-			continue;
 		}
 		else
 		{
-			index++;
+			index += 1;
 			count += choice(args, format[index]);
-			index++;
-			continue;
 		}
+		index += 1;
 	}
 	va_end(args);
 	return (count);
