@@ -1,5 +1,5 @@
 #include "main.h"
-11;rgb:0000/0000/0000/**
+/**
  * _putchar - print a character tp stdout
  * @c: character to print
  * Return: 1 on success
