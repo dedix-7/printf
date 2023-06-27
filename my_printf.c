@@ -6,25 +6,41 @@
  */
 int _printf(const char *format, ...)
 {
-	int index = 0, count = 0;
+	int index = 0, count = 0, value = 0;
 	va_list args;
 
 	va_start(args, format);
 	if (format == NULL)
 		return (-1);
-	while (format[index] != '\0')
+
+	for (; format[index] != '\0' ; index++)
 	{
 		if (format[index] != '%')
 		{
 			_putchar(format[index]);
-			count++;
 		}
-		else
+		else if (format[index + 1] == 'c')
 		{
+			_putchar(va_arg(args, int));
 			index++;
-			count += choice(args, format[index]);
 		}
-		index++;
+		else if (format[index + 1] == 's')
+		{
+			value = _puts(va_arg(args, char *));
+			index++;
+			count += value - 1;
+		}
+		else if (format[index + 1] == '%')
+		{
+			_putchar('%');
+			index++;
+		}
+		else if ((format[index + 1] == 'd') || (format[index + 1] == 'i'))
+		{
+			printint(va_arg(args, int));
+			index++;
+		}
+		count += 1;
 	}
 	va_end(args);
 	return (count);
