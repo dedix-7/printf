@@ -41,10 +41,7 @@ int _printf(const char *format, ...)
 			count += choice(args, format[index]);
 		}
 		else
-		{
 			_putchar('%');
-			count++;
-		}
 		index++;
 	}
 	va_end(args);
