@@ -18,16 +18,18 @@ int _putchar(char c)
 int choice(va_list r, char str)
 {
 	int count = 0;
+	char c;
 
 		switch (str)
 		{
 			case 'c':
-				if ( c == NULL)
+				c = va_arg(r, int);
+				if (c == NULL)
 				{
 					count += _putchar('-');
 					break;
 				}
-				count += _putchar(va_arg(r, int));
+				count += _putchar(c);
 				break;
 			case 'd':
 				count += printint(va_arg(r, int));
