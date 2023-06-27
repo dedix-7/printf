@@ -18,10 +18,8 @@ int _printf(const char *format, ...)
 		{
 			_putchar(format[index]);
 			count++;
-			index++;
-			continue;
 		}
-		else if (format[index] == '%')
+		else
 		{
 			index++;
 			count += choice(args, format[index]);

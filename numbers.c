@@ -10,7 +10,7 @@ int printint(int r)
 {
 	int val, len = 0;
 
-	if (r)
+	if (!r)
 	{
 		len += _putchar('0');
 		return (len);

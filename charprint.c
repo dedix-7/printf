@@ -24,7 +24,7 @@ int choice(va_list r, char str)
 		{
 			case 'c':
 				c = va_arg(r, int);
-				if (c == NULL)
+				if (c == '\0')
 				{
 					count += _putchar('-');
 					break;

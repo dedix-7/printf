@@ -22,7 +22,7 @@ int _puts(char *str)
 		{
 			_putchar(str[len]);
 			len++;
-			count += 1;
+			count++;
 		}
 	}
 	return (count);
