@@ -11,5 +11,7 @@ int printint(int r);
 int _puts(char *str);
 int _printf(const char *format, ...);
 void get_int(int number);
+int choice(va_list args, char r);
+
 #endif /* MAIN_H*/
 

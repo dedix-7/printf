@@ -1,52 +1,36 @@
 #include "main.h"
-
 /**
- *_printf - printf function
- *@format: number of arguments
- *@...: arguments passed
- *Return: chars printed
+ * _printf - print fornmatted output to screen
+ * @format - string
+ * 
+ * Reteurn: charcter count
  */
-
 int _printf(const char *format, ...)
 {
-	int count = 0, intvalue, digits;
-	char *str, c;
-	const char *p;
-	va_list list;
+	int index = 0, count = 0;
+	va_list args;
 
-	va_start(list, format);
-	for (p = format; *p; p++)
+	va_start(args, format);
+	if (format == NULL)
+		return (-1);
+	while (format[index] != '\0')
 	{
-		if (*p != '%')
+		if (format[index] != '%')
 		{
-			_putchar(*p);
+			_putchar(format[index]);
 			count++;
+			index++;
 			continue;
 		}
-		switch (*++p)
+		else if (format[index] == '%')
 		{
-			case 'c':
-				digits = _putchar(va_arg(list, int));
-				count += digits;
-				break;
-			case 'd':
-				intvalue = va_arg(list, int);
-				count += printint(intvalue);
-				break;
-			case 'i':
-				digits = printint(va_arg(list, int));
-				count += digits;
-				break;
-			case 's':
-				digits = _puts(va_arg(list, char *));
-				count += digits;
-				break;
-			default:
-				_putchar(*p);
-				count++;
-			break;
+			index++;
+			count += choice(args, format[index]);
+			index ++;
+			continue;
 		}
+		index++;
 	}
-	va_end(list);
+	va_end(args);
 	return (count);
 }

@@ -8,34 +8,23 @@
  */
 int printint(int r)
 {
-	int remainder, quotient, number = 0;
+	int val, len = 0;
 
+	if (r)
+	{
+		len += _putchar('0');
+		return (len);
+	}
 	if (r < 0)
 	{
-		_putchar('-');
-		number++;
+		len += _putchar('-');
 		r = -r;
 	}
-	remainder = r % 10;
-	quotient = r / 10;
-	if (r == 0)	{
-		_putchar(48);
-		number++;
-		_putchar(48);
-		number++;
-		return (number);
-	}
-	if (quotient == 0)
-	{
-		_putchar(remainder + 48);
-		number++;
-		return (number);
-	}
-	if (remainder < quotient)
-	{
-		number = number + (printint(quotient));
-		_putchar(remainder + 48);
-		number++;
-	}
-	return (number);
+	val = r % 10;
+	r = r / 10;
+	if (r)
+		len += printint(r);
+	len += _putchar(val + '0');
+
+	return (len);
 }
