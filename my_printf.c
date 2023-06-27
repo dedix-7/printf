@@ -6,21 +6,18 @@
  */
 int _printf(const char *format, ...)
 {
-	int index = 0, count = 0;
+	int index = 0, count = 0, value = 0;
 	va_list args;
 
 	va_start(args, format);
 	if (format == NULL)
 		return (-1);
-
 	while (format[index] != '\0')
 	{
 		if (format[index] != '%')
 		{
 			_putchar(format[index]);
-<<<<<<< HEAD
 			count++;
-=======
 		}
 		else if (format[index + 1] == 'c')
 		{
@@ -42,13 +39,9 @@ int _printf(const char *format, ...)
 		{
 			count += printint(va_arg(args, int));
 			index++;
->>>>>>> c37a6379115f4a5d82dd51cf20338492dde1830e
 		}
 		else
-		{
-			index++;
-			count += choice(args, format[index]);
-		}
+			_putchar('%');
 		index++;
 	}
 	va_end(args);
