@@ -15,6 +15,11 @@ int printint(int r)
 		_putchar(48);
 		return (1);
 	}
+	if (r == -2147483648)
+	{
+		len += _puts("-2147483648");
+		return (len);
+	}
 	else if (r < 0)
 	{
 		len += _putchar('-');
