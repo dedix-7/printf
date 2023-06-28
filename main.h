@@ -10,6 +10,5 @@ int printint(int r);
 int _puts(char *str);
 int _printf(const char *format, ...);
 int choice(va_list r, char str);
-int printspace(int space);
 
 #endif /* MAIN_H*/

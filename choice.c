@@ -10,11 +10,13 @@
 int choice(va_list r, char str)
 {
 	int count = 0;
+	char c;
 
 	switch (str)
 	{
 		case 'c':
-			count += _putchar(va_arg(r, int));
+			c = va_arg(r, int);
+			count += _putchar(c);
 			break;
 		case 's':
 			count += _puts(va_arg(r, char *));
