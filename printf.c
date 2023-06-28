@@ -1,6 +1,7 @@
 #include "main.h"
 /**
  * _printf - print fornmatted output to screen
+ * looks to emulate the standard printf
  * @format: string
  * Return: character count
  */
