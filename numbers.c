@@ -12,8 +12,9 @@ int printint(int r)
 
 	if (!r)
 	{
-		_putchar('0');
-		return (1);
+		_putchar(0);
+		_putchar(48);
+		return (2);
 	}
 	if (r < 0)
 	{
