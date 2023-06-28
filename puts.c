@@ -10,7 +10,7 @@ int _puts(char *str)
 {
 	int len = 0, count = 0;
 
-	if (str == NULL)
+	if (!str)
 	{
 		str = "(null)";
 		count += _puts(str);
