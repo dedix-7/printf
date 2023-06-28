@@ -12,10 +12,10 @@ int printint(int r)
 
 	if (!r)
 	{
-		_putchar('0');
+		_putchar(48);
 		return (1);
 	}
-	if (r < 0)
+	else if (r < 0)
 	{
 		len += _putchar('-');
 		r = -r;
