@@ -49,10 +49,9 @@ int printbin(int num)
 		num = -num;
 	}
 	quotient = num / 2;
-	remainder = n % 2;
+	remainder = num % 2;
 	if (quotient)
 		count += printbin(quotient);
 	count += _putchar(remainder + 48);
 	return (count);
 }
-		
