@@ -38,7 +38,7 @@ int printint(int r)
  * @num: number to be converted
  * Return:number of characters
  */
-int printbin(long long int num)
+int printbin(long int num)
 {
 	int remainder, quotient, count = 0;
 
