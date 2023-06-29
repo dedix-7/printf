@@ -48,6 +48,11 @@ int printbin(int num)
 		count += 1;
 		num = -num;
 	}
+	if (!num)
+	{
+		_putchar(48);
+		return (1);
+	}
 	quotient = num / 2;
 	remainder = num % 2;
 	if (quotient)
