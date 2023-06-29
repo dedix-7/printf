@@ -12,5 +12,22 @@ int printint(int r);
 int _puts(char *str);
 int _printf(const char *format, ...);
 int choice(va_list r, char str);
+/**
+ * struct choice - struct to nhold the choice of a person
+ * @spec: format specifier
+ * @point: function pointer to a function that takes a va_list
+ * and returns an integer, count of characters
+ * Description: to be held in an array so teh functions loops
+ * as opposed to using switch case statements and if else ladders.
+ */
+struct choice
+{
+	char spec;
+	int (*point)(va_list arg);
+};
+/**
+ * point - typedef for choice
+ */
+typedef struct choice point;
 
 #endif /* MAIN_H*/
