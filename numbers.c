@@ -33,3 +33,26 @@ int printint(int r)
 
 	return (len);
 }
+/**
+ * printbin - prints a binary conversion of an int
+ * @num: number to be converted
+ * Return:number of characters
+ */
+int printbin(int num)
+{
+	int remainder, quotient, count = 0;
+
+	if (num < 0)
+	{
+		_putchar(1 + 48);
+		count += 1;
+		num = -num;
+	}
+	quotient = num / 2;
+	remainder = n % 2;
+	if (quotient)
+		count += printbin(quotient);
+	count += _putchar(remainder + 48);
+	return (count);
+}
+		
