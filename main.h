@@ -12,7 +12,7 @@ int printint(int r);
 int _puts(char *str);
 int _printf(const char *format, ...);
 int choice(va_list r, char str);
-int printbin(int num);
+int printbin(long long int num);
 /**
  * struct choice - struct to nhold the choice of a person
  * @spec: format specifier
