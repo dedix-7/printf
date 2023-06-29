@@ -60,3 +60,26 @@ int printbin(long int num)
 	count += _putchar(remainder + 48);
 	return (count);
 }
+/**
+ * printoctal - print numbers to base 8
+ * @num: number to be converted
+ * Return: nunmber of bits
+ * has npo sign
+ */
+int printoctal(long int num)
+{
+	int remainder, quotient, count = 0;
+
+	if (num < 0)
+	{
+		_putchar(1 + 48);
+		count += 1;
+		num = -num;
+	}
+	quotient = num / 8;
+	remainder = num % 8;
+	if (quotient)
+		count += printbin(quotient);
+	count += _putchar(remainder + 48);
+	return (count);
+}

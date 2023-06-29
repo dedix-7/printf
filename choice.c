@@ -34,6 +34,9 @@ int choice(va_list r, char str)
 		case 'b':
 			count += printbin(va_arg(r, unsigned int));
 			break;
+		case 'o':
+			count += printoctal(va_arg(r, int));
+			break;
 		default:
 			_putchar('%');
 			count++;

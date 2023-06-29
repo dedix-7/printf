@@ -13,6 +13,8 @@ int _puts(char *str);
 int _printf(const char *format, ...);
 int choice(va_list r, char str);
 int printbin(long int num);
+int printoctal(int num);
+
 /**
  * struct choice - struct to nhold the choice of a person
  * @spec: format specifier
