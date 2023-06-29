@@ -5,6 +5,8 @@
 #include <stdlib.h>
 #include <stdarg.h>
 
+#define BUFFER 1024
+
 int _putchar(char c);
 int printint(int r);
 int _puts(char *str);
