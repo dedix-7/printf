@@ -1,5 +1,5 @@
 #include "main.h"
-
+11;rgb:0000/0000/0000
 /**
  *choice - choose specifier and print it
  *@r: variable list
@@ -39,7 +39,7 @@ int choice(va_list r, char str)
 			break;
 		case 'x':
 		case 'X':
-			count += printhex(va_arg(r, long long int));
+			count += printhex(va_arg(r, int));
 			break;
 		default:
 			_putchar('%');
