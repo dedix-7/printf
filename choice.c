@@ -25,10 +25,8 @@ int choice(va_list r, char str)
 			break;
 		case 'd':
 		case 'i':
-			count += printint(va_arg(r, int));
-			break;
 		case 'u':
-			count += printint(va_arg(r, unsigned int));
+			count += printint(va_arg(r, int));
 			break;
 		case 'b':
 			count += printbin(va_arg(r, unsigned int));
