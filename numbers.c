@@ -88,7 +88,7 @@ int printoctal(long int num)
  * @num: number to be converted
  * Return: number of digits
  */
-int printhex(long int num)
+int printhex(int num)
 {
 	int remainder, quotient, count = 0;
 
