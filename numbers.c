@@ -83,3 +83,28 @@ int printoctal(long int num)
 	count += _putchar(remainder + 48);
 	return (count);
 }
+/**
+ * printhex - print numbers tio base 16
+ * @num: number to be converted
+ * Return: number of digits
+ */
+int printhex(long long int num)
+{
+	int remainder, quotient, count = 0;
+
+	if (num < 0)
+	{
+		_putchar('-');
+		count += 1;
+		num = -num;
+	}
+	quotient = num / 16;
+	remainder = num % 16;
+	if (quotient)
+		count += printbin(quotient);
+	if (remainder < 10)
+		count += _putchar(remainder + 48);
+	else if (remainder >= 10)
+		count += _putchar(reminder + 55);
+	return (count);
+}
