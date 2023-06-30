@@ -32,6 +32,6 @@ struct choice
 /**
  * point - typedef for choice
  */
-typedef struct choice point;
+//typedef struct choice point;
 
 #endif /* MAIN_H*/
