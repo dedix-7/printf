@@ -37,14 +37,15 @@ int choice(va_list r, char str)
 			count += printoctal(va_arg(r, int));
 			break;
 		case 'x':
+			count += printhex(va_arg(r, int));
+			break;
 		case 'X':
 			count += printhex(va_arg(r, int));
 			break;
 		default:
 			_putchar('%');
-			count++;
 			_putchar(str);
-			count++;
+			count += 2;
 			break;
 	}
 	return (count);
