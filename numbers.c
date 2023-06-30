@@ -105,6 +105,6 @@ int printhex(int num)
 	if (remainder < 10)
 		count += _putchar(remainder + 48);
 	else if (remainder >= 10)
-		count += _putchar(remainder + 55);
+		count += _putchar(remainder + 87);
 	return (count);
 }
