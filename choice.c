@@ -39,7 +39,7 @@ int choice(va_list r, char str)
 			break;
 		case 'x':
 		case 'X':
-			count += printhex(va_arg(r, int));
+			count += printhex(va_arg(r, long long int));
 			break;
 		default:
 			_putchar('%');
