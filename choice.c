@@ -1,5 +1,4 @@
 #include "main.h"
-11;rgb:0000/0000/0000
 /**
  *choice - choose specifier and print it
  *@r: variable list
